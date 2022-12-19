@@ -79,15 +79,16 @@ else
 Console.Write("Input a number: ");
 int N = Convert.ToInt32(Console.ReadLine());
 int current = 1;
-while(current <= N)
+while(current < N)
 {
-    while(current % 2 == 0)
+    current++;
+    if(current % 2 == 0)
     {
         Console.Write(current + " ");
-        current++;
     }
 }
 */
+
 
 
 
