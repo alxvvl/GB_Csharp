@@ -100,23 +100,23 @@ Element(myArray);
 */
 
 // TASK 3. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-/*
-double[,] CreateRandom2dArray()
+
+int[,] CreateRandom2dArray()
 {
 	Console.Write("Input number of rows: ");
 	int rows = Convert.ToInt32(Console.ReadLine());
-	Console.Write("Input number of colums: ");
-	int colums = Convert.ToInt32(Console.ReadLine());
+	Console.Write("Input number of columns: ");
+	int columns = Convert.ToInt32(Console.ReadLine());
 	Console.Write("Input a min possible value: ");
 	int minValue = Convert.ToInt32(Console.ReadLine());
 	Console.Write("Input a max possible value: ");
 	int maxValue = Convert.ToInt32(Console.ReadLine());
 	
-	double[,] array = new double[rows, colums]; 
+	int[,] array = new int[rows, columns]; 
 	
 	for(int i = 0; i < rows; i++)
 	{
-		for(int j = 0; j < colums; j++)
+		for(int j = 0; j < columns; j++)
 		{
 			array[i,j] = new Random().Next(minValue, maxValue + 1);
 		}
@@ -124,7 +124,7 @@ double[,] CreateRandom2dArray()
 	return array;
 }	
 
-void Show2dArray(double[,] array)
+void Show2dArray(int[,] array)
 {
 	for(int i = 0; i < array.GetLength(0); i++)
 	{
@@ -137,7 +137,7 @@ void Show2dArray(double[,] array)
 	Console.WriteLine();			
 }
 
-double[] avg(double[,] array)
+double[] avg(int[,] array)
 {
     double sum = 0;
 	double[] result = new double[array.GetLength(1)];
@@ -154,7 +154,7 @@ double[] avg(double[,] array)
 	return sum;			
 }
 
-double[,] myArray = CreateRandom2dArray();
+int[,] myArray = CreateRandom2dArray();
 Show2dArray(myArray);
 double[] result = avg(myArray);
-*/
+
